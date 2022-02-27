@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
-class SearchBar extends StatelessWidget {
+class SearchBar extends StatefulWidget {
   const SearchBar({Key? key}) : super(key: key);
+
+  @override
+  State<SearchBar> createState() => _SearchBarState();
+}
+
+class _SearchBarState extends State<SearchBar> {
+  @override
+  void initState() {
+    super.initState();
+    print('criei');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,5 +37,11 @@ class SearchBar extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  @override
+  void dispose() {
+    print('disposei');
+    super.dispose();
   }
 }
