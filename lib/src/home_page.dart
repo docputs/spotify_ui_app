@@ -3,6 +3,7 @@ import 'package:spotify_ui_app/src/models/song.dart';
 
 import 'widgets/playlist_album_cover.dart';
 import 'widgets/search_bar.dart';
+import 'widgets/track_list_tile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -25,15 +26,7 @@ class HomePage extends StatelessWidget {
                 itemCount: mockSongs.length,
                 itemBuilder: (context, index) {
                   final song = mockSongs[index];
-                  return ListTile(
-                    title: Text(song.title),
-                    subtitle: Text(song.artist),
-                    leading: Container(
-                      height: 40,
-                      width: 40,
-                      color: Colors.red,
-                    ),
-                  );
+                  return TrackListTile(song);
                 },
               ),
             ),

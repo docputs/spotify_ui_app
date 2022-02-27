@@ -10,6 +10,8 @@ class Song {
     required this.artist,
     this.albumImageUrl,
   });
+
+  bool get hasAlbumCover => albumImageUrl != null;
 }
 
 const mockSongs = [
